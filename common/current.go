@@ -9,7 +9,7 @@ type User struct {
 	Email string
 }
 
-func Owner(r *git.Repository) *User{
+func CurrentUser(r *git.Repository) *User{
 	user := &User{}
 	config, err := r.Config()
 	CheckIfError(err)

@@ -11,6 +11,7 @@ func main() {
 	CheckIfError(err)
 	// get current user
 	user := CurrentUser(r)
+	commitNumber := Log(user.Name)
 	fmt.Println(user.Name)
-	Log("steven.gao")
+	fmt.Println("commits: ", commitNumber)
 }
